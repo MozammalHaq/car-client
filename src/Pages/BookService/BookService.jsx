@@ -8,7 +8,7 @@ const BookService = () => {
     const { user } = useContext(AuthContext);
     const { _id, title, price, img } = service;
 
-    const handleCheckOut = event => {
+    const handleBook = event => {
         event.preventDefault();
 
         const form = event.target;
@@ -46,7 +46,7 @@ const BookService = () => {
     return (
         <div className="my-20 p-20 bg-slate-100">
             <h2 className="text-4xl font-bold text-center mb-6">{title}</h2>
-            <form onSubmit={handleCheckOut}>
+            <form onSubmit={handleBook}>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-10">
                     <div className="form-control">
                         <label className="label">
